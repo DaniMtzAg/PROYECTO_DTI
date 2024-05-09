@@ -16,3 +16,6 @@ A = readtable('DATOS_FINALES_ARMONIZADOS.xlsx');
 %% Función que genera los histogramas y las pruebas de normalidad de las variables analizadas para cada uno de los grupos
 [result] = ntest(data,15);
 fprintf(result)
+
+%% Función que realiza las pruebas de hipótesis sobre las diferencias de medias
+[test] = mdiftest(data,0.05);
